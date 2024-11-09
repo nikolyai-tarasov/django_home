@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} Карточка товара {% endblock %}
+
+{% block content %}
+{% include 'header.html' %}
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            <div class="col">
+
+                <div class="card shadow-sm">
+                    <img src="{{products.image}}">
+                    <div class="card-body">
+                        <p class="card-text">{{products.name}}</p>
+                        <p class="card-text">{{products.description}}</p>
+                        <p class="card-text">{{products.category}}</p>
+                        <p class="card-text">{{products.price}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

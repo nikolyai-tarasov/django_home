@@ -31,4 +31,3 @@ class Product(models.Model):
     def __str__(self):
         return f'{self.name} - {self.category}'
 
-# Product.objects.create(name="Голубика",description="Темного цвета",category"Ягоды",price=450,created_at ="21-12-2023",updated_at="16-10-2024")
