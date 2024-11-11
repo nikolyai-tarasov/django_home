@@ -3,7 +3,9 @@ from catalog.models import Product
 
 
 def home(request):
-    return render(request, "home.html")
+    prod = Product.objects.all()
+    context = {"products": prod}
+    return render(request, "home.html", context)
 
 
 def contacts(request):
@@ -12,12 +14,6 @@ def contacts(request):
 
 def index(request):
     return render(request, "base.html")
-
-
-def product_all(request):
-    prod = Product.objects.all()
-    context = {"products": prod}
-    return render(request, "product_all.html", context)
 
 
 def product_detail(request, prod_id):
