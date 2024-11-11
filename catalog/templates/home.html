@@ -20,7 +20,7 @@
                         <p class="card-text">{{product.price}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a class="p-2 btn btn-outline-primary" href="/product_detail/">Купить</a>
+                                <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:product_detail' product.pk%}">Купить</a>
                             </div>
 
                         </div>
