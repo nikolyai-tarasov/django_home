@@ -15,12 +15,12 @@
                     <img src="{{product.image | media_filter}}">
                     <div class="card-body">
                         <p class="card-text">{{product.name}}</p>
-                        <p class="card-text">{{product.description}}</p>
+                        <p class="card-text">{{product.description | truncatechars:100}}</p>
                         <p class="card-text">{{product.category}}</p>
                         <p class="card-text">{{product.price}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:product_detail' product.pk%}">Купить</a>
+                                <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:product_detail' product.id%}">Купить</a>
                             </div>
 
                         </div>
