@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Редактирование поста {% endblock %}
+{% load my_tags %}
+{% block content %}
+<h2>Редактирование поста</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <a class="p-2 btn btn-outline-primary" href="{% url 'my_blog:post_detail' post.id %}">Отмена</a>
+
+</form>
+
+
+
+{% include 'header.html' %}
+{% endblock %}
