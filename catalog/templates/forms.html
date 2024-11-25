@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Создание товара {% endblock %}
+{% load my_tags %}
+{% block content %}
+
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Создать</button>
+    <a class="p-2 btn btn-outline-primary" href="{% url 'catalog:home' %}">Отмена</a>
+</form>
+
+
+{% include 'header.html' %}
+{% endblock %}
