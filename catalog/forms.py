@@ -1,5 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from django.template.defaultfilters import lower
 
 from .models import Product
 
@@ -19,11 +20,18 @@ class ProductForm(forms.ModelForm):
         self.fields['price'].widget.attrs.update({'class': 'form-control'})
         self.fields['created_at'].widget.attrs.update({'class': 'form-control'})
 
-    def clean_name(self):
+    def clean(self):
         name = self.cleaned_data.get('name')
+        description = self.cleaned_data.get('description')
+
         if name.lower() in forbidden_words:
             raise ValidationError(f'В имени использовано запрещенное слово {name}')
-        return name
+        elif description is not None:
+            lower_ = description.lower()
+            for i in forbidden_words:
+                if i in lower_:
+                    raise ValidationError(f'В описании использовано запрещенное слово {i}')
+
     def clean_price(self):
         price = self.cleaned_data.get('price')
         if float(price) < 0:
