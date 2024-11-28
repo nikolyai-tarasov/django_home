@@ -20,7 +20,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='product/photo', blank=True, null=True)
     category = models.ForeignKey(Category,on_delete=models.CASCADE, related_name='products')
     price = models.IntegerField(verbose_name='Введите цену продукта')
-    created_at = models.DateField(blank=True, null=True)
+    created_at = models.DateField(blank=True, null=True, help_text='Введите дату в формате "гггг-мм-дд"')
     updated_at = models.DateField(blank=True, null=True)
 
     class Meta:

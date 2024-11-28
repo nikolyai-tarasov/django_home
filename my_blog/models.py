@@ -2,7 +2,7 @@ from django.db import models
 
 class Post(models.Model):
     heading = models.CharField(max_length=50, verbose_name='Заголовок', help_text='Введите заголовок')
-    description = models.TextField('Введите содержимое поста')
+    description = models.TextField(help_text='Введите содержимое поста')
     image = models.ImageField(upload_to='blog/photo', blank=True, null=True)
     created_at = models.DateField(blank=True, null=True)
     publication = models.BooleanField()
