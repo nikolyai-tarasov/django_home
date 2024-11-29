@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecd7e53a-138e-4571-8be2-098fd3850e1a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
     &quot;Python.ап.executor&quot;: &quot;Run&quot;,
     &quot;Python.ва.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#5 on feature/web__app&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/web__app&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/kolya/PycharmProjects/kyrs_2_on_oop&quot;
   }
 }</component>
