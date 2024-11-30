@@ -11,7 +11,7 @@ class HomeView(ListView):
     context_object_name = 'products'
 
 
-class ContactsView(ListView):
+class ContactsView(LoginRequiredMixin,ListView):
     model = Product
     template_name = 'contacts.html'
 
@@ -21,7 +21,7 @@ class IndexView(ListView):
     template_name = 'base.html'
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(LoginRequiredMixin,DetailView):
     model = Product
     template_name = 'product_detail.html'
 
@@ -38,7 +38,7 @@ class ReformUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'reform.html'
     success_url = reverse_lazy('catalog:home')
 
-class DeleteProductView(DeleteView):
+class DeleteProductView(LoginRequiredMixin ,DeleteView):
     model = Product
     template_name = 'delete_product.html'
     success_url = reverse_lazy('catalog:home')

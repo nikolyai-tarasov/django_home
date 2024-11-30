@@ -48,17 +48,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.views.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ап.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ва.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/web__app&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kolya/PycharmProjects/kyrs_2_on_oop&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.views.executor": "Run",
+    "Python.ап.executor": "Run",
+    "Python.ва.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "#6 on feature/web__app",
+    "last_opened_file_path": "C:/Users/kolya/PycharmProjects/kyrs_2_on_oop"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kolya\PycharmProjects\django_home\my_blog\templates" />
