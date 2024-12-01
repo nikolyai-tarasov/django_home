@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'catalog',
     'my_blog',
+    'users',
+
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media',)
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+
+
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
+EMAIL_USE_TLS = False if os.getenv('EMAIL_USE_TLS') == "False" else True
+EMAIL_USE_SSL = True if os.getenv('EMAIL_USE_SSL') == "True" else False
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+LOGIN_REDIRECT_URL = 'catalog:home'
